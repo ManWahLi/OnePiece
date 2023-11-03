@@ -3,6 +3,8 @@
   <%= render @customers %>
 </section>
 <nav>
-  <%= link_to 'missing email', customers_missing_email_path %>
-  <%= link_to 'alphateized', customers_alphabetized_path %>
+  <ul>
+    <li><%= link_to 'Customers with missing email', customers_missing_email_path %></li>
+    <li><%= link_to 'All customers alphabetized', customers_alphabetized_path %></li>
+  </ul>
 </nav>

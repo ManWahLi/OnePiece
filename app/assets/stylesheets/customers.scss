@@ -1,0 +1,9 @@
+a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #07004b; /* Text color for links */
+  transition: color 0.2s; /* Add a smooth color transition effect */
+}
+
+a:hover {
+  color: #ff9900;
+}

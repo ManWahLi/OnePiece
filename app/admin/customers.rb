@@ -13,4 +13,17 @@ ActiveAdmin.register Customer do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  form do |f|
+    f.semantic_errors
+    f.inputs
+    f.inputs do
+      # f.input :image, as: :file
+      # condition + ternary operator
+      # CSS can only change how images are displayed but not their sizes
+      f.input :image, as:   :file,
+                      hint: f.object.image.present? ? image_tag(f.object.image.variant(resize_to_limit: [500, 500])) : ""
+    end
+    f.actions
+  end
 end

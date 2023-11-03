@@ -1,0 +1,9 @@
+  <aside>
+    <h2><strong><%= customer.full_name %></strong></h2>
+    <% if customer.image.present? %>
+      <p><%= image_tag customer.image.variant(resize_to_limit: [285, 285]).processed  %></p>
+    <% end %>
+    <p><strong>Notes: </strong><%= customer.notes %></p>
+    <p><%= customer.phone_number %></p>
+    <p><%= customer.email_address %></p>
+  </aside>

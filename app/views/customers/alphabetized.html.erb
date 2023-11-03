@@ -1,0 +1,8 @@
+<h1>All Customers ordered by full name</h1>
+<section>
+  <%= render @customers %>
+</section>
+<nav>
+  <%= link_to 'all customers', root_path %>
+  <%= link_to 'customers with missing email', customers_missing_email_path %>
+</nav>

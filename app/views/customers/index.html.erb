@@ -1,2 +1,8 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<h1>All Customers</h1>
+<section>
+  <%= render @customers %>
+</section>
+<nav>
+  <%= link_to 'missing email', customers_missing_email_path %>
+  <%= link_to 'alphateized', customers_alphabetized_path %>
+</nav>
